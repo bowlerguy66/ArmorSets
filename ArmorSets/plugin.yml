@@ -1,0 +1,7 @@
+name: ArmorSets
+main: me.bowlerguy66.armorsets.ArmorSets
+version: 1.0
+api-version: 1.13
+commands:
+  listsets:
+  upgradepiece:
