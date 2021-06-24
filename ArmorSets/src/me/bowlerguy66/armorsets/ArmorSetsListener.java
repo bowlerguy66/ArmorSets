@@ -50,9 +50,7 @@ public class ArmorSetsListener implements Listener {
 		
 		Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, new Runnable() {
 			public void run() {
-				for(ArmorSet set : plugin.getArmorSets()) {
-					set.tickArmor((Player) event.getWhoClicked());
-				}				
+				plugin.tickArmor(event.getWhoClicked());
 			}
 		}, 1L);
 	}
@@ -65,9 +63,7 @@ public class ArmorSetsListener implements Listener {
 		if(!isArmorMaterial(event.getItem().getType()));
 		Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, new Runnable() {
 			public void run() {
-				for(ArmorSet set : plugin.getArmorSets()) {
-					set.tickArmor(event.getPlayer());
-				}				
+				plugin.tickArmor(event.getPlayer());
 			}
 		}, 1L);
 		

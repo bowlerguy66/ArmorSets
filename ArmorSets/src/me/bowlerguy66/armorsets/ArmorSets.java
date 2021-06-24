@@ -128,5 +128,11 @@ public class ArmorSets extends JavaPlugin {
 		}
 		armorSets.add(set);
 	}
+
+	public void tickArmor(LivingEntity le) {
+		for(ArmorSet set : getArmorSets()) {
+			set.tickArmor(le);
+		}				
+	}
 	
 }
